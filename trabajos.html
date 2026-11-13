@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajos — Ignacio Fudim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">IF</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="experiencia.html">Experiencia</a></li>
+        <li><a href="trabajos.html" class="nav-active">Trabajos</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li class="nav-mobile-cta"><a href="mailto:nachofudim@gmail.com">Trabajemos juntos →</a></li>
+      </ul>
+      <a href="mailto:nachofudim@gmail.com" class="nav-cta">Trabajemos juntos</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="section-tag">Portfolio</span>
+      <h1>Mis <span class="accent">Trabajos</span></h1>
+    </div>
+  </div>
+
+  <section id="works">
+    <div class="container">
+      <div class="filter-row">
+        <button class="filter-btn active" data-tab="reels">Reels</button>
+        <button class="filter-btn" data-tab="posts">Publicaciones</button>
+      </div>
+
+      <div class="works-grid" id="works-grid">
+
+        <div class="work-card featured" data-category="video motion social"
+             data-type="video" data-src="www/oil-lab/reel-1.mp4"
+             data-title="OIL LAB Argentina — Reel de Campaña"
+             data-desc="Reel principal de la campaña de lanzamiento de OIL LAB Argentina, laboratorio de análisis de aceite usado. Dirección, edición y motion graphics.">
+          <div class="work-thumb video-thumb">
+            <video src="www/oil-lab/reel-1.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">⭐ OIL LAB</span>
+            <span class="featured-badge">Destacado</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB Argentina — Campaña</h3>
+            <p>Reel de lanzamiento — edición, motion graphics y guion</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>After Effects</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/slides/slide-1.jpg|www/oil-lab/slides/slide-2.jpg|www/oil-lab/slides/slide-3.jpg|www/oil-lab/slides/slide-4.jpg|www/oil-lab/slides/slide-5.jpg|www/oil-lab/slides/slide-6.jpg|www/oil-lab/slides/slide-7.jpg|www/oil-lab/slides/slide-8.jpg"
+             data-title="OIL LAB — Carrusel de Lanzamiento"
+             data-desc="Carrusel de 8 piezas para el lanzamiento de OIL LAB Argentina, laboratorio de análisis de aceite usado. Guion visual completo: del problema al servicio.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/slides/slide-1.jpg" alt="OIL LAB Carrusel" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">8 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Carrusel de Lanzamiento</h3>
+            <p>Guion visual de 8 piezas para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion social"
+             data-type="video" data-src="www/oil-lab/video-2.mp4"
+             data-title="OIL LAB — Video Institucional"
+             data-desc="Pieza audiovisual institucional para OIL LAB Argentina, explicando el servicio de análisis de aceite usado.">
+          <div class="work-thumb video-thumb">
+            <video src="www/oil-lab/video-2.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">OIL LAB</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Video Institucional</h3>
+            <p>Edición y motion graphics · Campaña OIL LAB</p>
+            <div class="work-tags"><span>After Effects</span><span>Edición</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion social"
+             data-type="video" data-src="www/oil-lab/reel-2.mp4"
+             data-title="OIL LAB — Reel Vol. 2"
+             data-desc="Segunda pieza de la campaña de OIL LAB Argentina para redes sociales.">
+          <div class="work-thumb video-thumb">
+            <video src="www/oil-lab/reel-2.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">OIL LAB</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Reel Vol. 2</h3>
+            <p>Edición y motion graphics · Campaña OIL LAB</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Motion</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="animation motion"
+             data-type="video" data-src="www/oil-lab/logo-reveal.mp4"
+             data-title="OIL LAB — Logo Reveal"
+             data-desc="Animación de presentación de marca para OIL LAB Argentina.">
+          <div class="work-thumb video-thumb">
+            <video src="www/oil-lab/logo-reveal.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Branding</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Logo Reveal</h3>
+            <p>Animación de marca · Motion graphics</p>
+            <div class="work-tags"><span>After Effects</span><span>Branding</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="design social"
+             data-type="image" data-src="www/oil-lab/post-roto.jpg"
+             data-title="OIL LAB — El motor puede estar roto"
+             data-desc="Pieza gráfica de la campaña OIL LAB Argentina, comunicando el valor del análisis de aceite antes de comprar un auto usado.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/post-roto.jpg" alt="OIL LAB pieza gráfica" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Pieza Gráfica</h3>
+            <p>Diseño de post para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion social"
+             data-type="video" data-src="www/pronostic/reel.mp4"
+             data-title="Pronostic.io — Reel Mundial 2026"
+             data-desc="Pieza audiovisual para Pronostic.io, plataforma de pronósticos deportivos con IA, sobre las semifinales del Mundial 2026.">
+          <div class="work-thumb video-thumb">
+            <video src="www/pronostic/reel.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Pronostic.io</span>
+          </div>
+          <div class="work-info">
+            <h3>Pronostic.io — Reel Mundial</h3>
+            <p>Edición y motion graphics · Mundial 2026</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Motion</span><span>Deportes</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/pronostic/slides/slide-1.jpg|www/pronostic/slides/slide-2.jpg|www/pronostic/slides/slide-3.jpg|www/pronostic/slides/slide-4.jpg|www/pronostic/slides/slide-5.jpg|www/pronostic/slides2/final-1.jpg|www/pronostic/slides2/final-2.jpg|www/pronostic/slides2/final-3.jpg|www/pronostic/slides2/final-4.jpg|www/pronostic/slides2/boca-ohiggins.jpg"
+             data-title="Pronostic.io — Carrusel Mundial 2026"
+             data-desc="Piezas gráficas para Pronostic.io durante el Mundial 2026: semifinales, la final Argentina vs España y Copa Sudamericana.">
+          <div class="work-thumb img-thumb">
+            <img src="www/pronostic/slides/slide-1.jpg" alt="Pronostic.io Carrusel" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">10 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>Pronostic.io — Carrusel Mundial</h3>
+            <p>Piezas gráficas para redes sociales · Mundial 2026 y Copa Sudamericana</p>
+            <div class="work-tags"><span>Photoshop</span><span>IA</span><span>Deportes</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/slides2/slide-1.jpg|www/oil-lab/slides2/slide-2.jpg|www/oil-lab/slides2/slide-3.jpg|www/oil-lab/slides2/slide-4.jpg|www/oil-lab/slides2/slide-5.jpg|www/oil-lab/slides2/slide-6.jpg"
+             data-title="OIL LAB — 5 Cosas que el Aceite Revela"
+             data-desc="Carrusel educativo para OIL LAB Argentina: qué puede detectar un análisis de aceite usado sin abrir el motor.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/slides2/slide-1.jpg" alt="OIL LAB — 5 Cosas que el Aceite Revela" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">6 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — 5 Cosas que el Aceite Revela</h3>
+            <p>Carrusel educativo para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/tunnel-travel/video-1.mp4"
+             data-title="Tunnel Travel — Video Promocional"
+             data-desc="Pieza audiovisual para Tunnel Travel Services, agencia de viajes.">
+          <div class="work-thumb video-thumb">
+            <video src="www/tunnel-travel/video-1.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Tunnel Travel</span>
+          </div>
+          <div class="work-info">
+            <h3>Tunnel Travel — Video Promocional</h3>
+            <p>Edición y postproducción · Tunnel Travel Services</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/tunnel-travel/video-2.mp4"
+             data-title="Tunnel Travel — Video Promocional Vol. 2"
+             data-desc="Segunda pieza audiovisual para Tunnel Travel Services.">
+          <div class="work-thumb video-thumb">
+            <video src="www/tunnel-travel/video-2.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Tunnel Travel</span>
+          </div>
+          <div class="work-info">
+            <h3>Tunnel Travel — Video Vol. 2</h3>
+            <p>Edición y postproducción · Tunnel Travel Services</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/tunnel-travel/video-3.mp4"
+             data-title="Tunnel Travel — Reel Cancún"
+             data-desc="Reel promocional de viaje a Cancún para Tunnel Travel Services.">
+          <div class="work-thumb video-thumb">
+            <video src="www/tunnel-travel/video-3.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Tunnel Travel</span>
+          </div>
+          <div class="work-info">
+            <h3>Tunnel Travel — Reel Cancún</h3>
+            <p>Edición y postproducción · Tunnel Travel Services</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/tunnel-travel/video-4.mp4"
+             data-title="Tunnel Travel — Reel Londres"
+             data-desc="Reel promocional de viaje a Londres para Tunnel Travel Services.">
+          <div class="work-thumb video-thumb">
+            <video src="www/tunnel-travel/video-4.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Tunnel Travel</span>
+          </div>
+          <div class="work-info">
+            <h3>Tunnel Travel — Reel Londres</h3>
+            <p>Edición y postproducción · Tunnel Travel Services</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/ladder-propiedades/video-1.mp4"
+             data-title="Ladder Propiedades — Video"
+             data-desc="Pieza audiovisual para Ladder Propiedades, inmobiliaria.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ladder-propiedades/video-1.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Ladder Propiedades</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Video</h3>
+            <p>Edición y postproducción · Ladder Propiedades</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/ladder-propiedades/video-paysandu.mp4"
+             data-title="Ladder Propiedades — Paysandú"
+             data-desc="Video tour de la propiedad en Paysandú, Caballito, para Ladder Propiedades.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ladder-propiedades/video-paysandu.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Ladder Propiedades</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Paysandú</h3>
+            <p>Video tour de propiedad · Ladder Propiedades</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/ladder-propiedades/reel-aguilar.mp4"
+             data-title="Ladder Propiedades — Reel Aguilar"
+             data-desc="Reel de propiedad para Ladder Propiedades.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ladder-propiedades/reel-aguilar.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Ladder Propiedades</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Reel Aguilar</h3>
+            <p>Video tour de propiedad · Ladder Propiedades</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/ladder-propiedades/reel-dorrego.mp4"
+             data-title="Ladder Propiedades — Reel Dorrego"
+             data-desc="Reel de propiedad para Ladder Propiedades.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ladder-propiedades/reel-dorrego.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Ladder Propiedades</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Reel Dorrego</h3>
+            <p>Video tour de propiedad · Ladder Propiedades</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/ladder-propiedades/video-ciudad-nuevo.mp4"
+             data-title="Ladder Propiedades — Ciudad Nuevo"
+             data-desc="Video de propiedad para Ladder Propiedades.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ladder-propiedades/video-ciudad-nuevo.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Ladder Propiedades</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Ciudad Nuevo</h3>
+            <p>Video de propiedad · Ladder Propiedades</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/ladder-propiedades/flyers/flyer-1.jpg|www/ladder-propiedades/flyers/flyer-2.jpg|www/ladder-propiedades/flyers/flyer-3.jpg|www/ladder-propiedades/flyers/flyer-4.jpg|www/ladder-propiedades/flyers/flyer-5.jpg|www/ladder-propiedades/flyers/flyer-6.jpg"
+             data-title="Ladder Propiedades — Piezas Gráficas"
+             data-desc="Flyers de propiedades en alquiler y venta para Ladder Propiedades: Caballito, Palermo, Barrancas de Belgrano y Barrio Norte.">
+          <div class="work-thumb img-thumb">
+            <img src="www/ladder-propiedades/flyers/flyer-1.jpg" alt="Ladder Propiedades — Piezas Gráficas" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">6 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>Ladder Propiedades — Piezas Gráficas</h3>
+            <p>Flyers de propiedades para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>Branding</span><span>Inmobiliaria</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/duda-cliente/slide-1.jpg|www/oil-lab/duda-cliente/slide-2.jpg|www/oil-lab/duda-cliente/slide-3.jpg|www/oil-lab/duda-cliente/slide-4.jpg|www/oil-lab/duda-cliente/slide-5.jpg"
+             data-title="OIL LAB — Por Qué Tu Cliente Duda"
+             data-desc="Carrusel para concesionarias: por qué el comprador duda antes de comprar un auto usado, y cómo el certificado de aceite elimina esa duda.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/duda-cliente/slide-1.jpg" alt="OIL LAB — Por Qué Tu Cliente Duda" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">5 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Por Qué Tu Cliente Duda</h3>
+            <p>Carrusel B2B para concesionarias</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/preguntas-vendedor/slide-1.jpg|www/oil-lab/preguntas-vendedor/slide-2.jpg|www/oil-lab/preguntas-vendedor/slide-3.jpg|www/oil-lab/preguntas-vendedor/slide-4.jpg|www/oil-lab/preguntas-vendedor/slide-5.jpg|www/oil-lab/preguntas-vendedor/slide-6.jpg"
+             data-title="OIL LAB — 5 Preguntas al Vendedor"
+             data-desc="Carrusel educativo para compradores: 5 preguntas clave antes de comprar un auto usado.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/preguntas-vendedor/slide-1.jpg" alt="OIL LAB — 5 Preguntas al Vendedor" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">6 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — 5 Preguntas al Vendedor</h3>
+            <p>Carrusel educativo para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/concesionaria/slide-1.jpg|www/oil-lab/concesionaria/slide-2.jpg|www/oil-lab/concesionaria/slide-3.jpg|www/oil-lab/concesionaria/slide-4.jpg|www/oil-lab/concesionaria/slide-5.jpg|www/oil-lab/concesionaria/slide-6.jpg"
+             data-title="OIL LAB — Tu Concesionaria sin Certificado"
+             data-desc="Carrusel B2B: por qué una concesionaria que vende sin certificado de aceite usado pierde ventas frente a las que sí lo ofrecen.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/concesionaria/slide-1.jpg" alt="OIL LAB — Tu Concesionaria sin Certificado" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">6 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Tu Concesionaria sin Certificado</h3>
+            <p>Carrusel B2B para concesionarias</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card carousel-card" data-category="design social"
+             data-type="carousel"
+             data-images="www/oil-lab/dos-autos/slide-1.jpg|www/oil-lab/dos-autos/slide-2.jpg|www/oil-lab/dos-autos/slide-3.jpg|www/oil-lab/dos-autos/slide-4.jpg|www/oil-lab/dos-autos/slide-5.jpg|www/oil-lab/dos-autos/slide-6.jpg|www/oil-lab/dos-autos/slide-7.jpg|www/oil-lab/dos-autos/slide-8.jpg|www/oil-lab/dos-autos/slide-9.jpg"
+             data-title="OIL LAB — Dos Autos, Distinta Historia"
+             data-desc="Carrusel: dos autos del mismo año pueden tener historias muy distintas por dentro. La importancia del certificado de aceite usado.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/dos-autos/slide-1.jpg" alt="OIL LAB — Dos Autos, Distinta Historia" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+            <span class="carousel-count">9 fotos</span>
+          </div>
+          <div class="work-info">
+            <h3>OIL LAB — Dos Autos, Distinta Historia</h3>
+            <p>Carrusel de concientización para redes sociales</p>
+            <div class="work-tags"><span>Photoshop</span><span>Copywriting</span><span>IA</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/independiente/hinchada-reel.mp4"
+             data-title="Cliente Independiente — Reel"
+             data-desc="Pieza audiovisual para cliente independiente, contenido de hinchada deportiva.">
+          <div class="work-thumb video-thumb">
+            <video src="www/independiente/hinchada-reel.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Freelance</span>
+          </div>
+          <div class="work-info">
+            <h3>Cliente Independiente — Reel</h3>
+            <p>Edición y postproducción · Contenido deportivo</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Edición</span><span>Deportes</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video animation motion"
+             data-type="video" data-src="www/ya-quiero-saber.mp4"
+             data-title="Ya Quiero Saber — Videoclip"
+             data-desc="Videoclip cinematográfico producido íntegramente. Dirección, filmación, montaje y postproducción completa.">
+          <div class="work-thumb video-thumb">
+            <video src="www/ya-quiero-saber.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Videoclip</span>
+          </div>
+          <div class="work-info">
+            <h3>Ya Quiero Saber — Videoclip</h3>
+            <p>Dirección, filmación y postproducción completa · 2024</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>Cinematografía</span><span>Color Grade</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social motion"
+             data-type="video" data-src="www/rb-analista-1.mp4"
+             data-title="RB Analista — Contenido Vol. 1"
+             data-desc="Producción de contenido para canal de análisis deportivo. Motion graphics, edición y postproducción para Publigram Agency.">
+          <div class="work-thumb video-thumb">
+            <video src="www/rb-analista-1.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Redes Sociales</span>
+          </div>
+          <div class="work-info">
+            <h3>RB Analista — Vol. 1</h3>
+            <p>Contenido digital para análisis deportivo · Publigram Agency</p>
+            <div class="work-tags"><span>Motion</span><span>Edición</span><span>Social Media</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social motion"
+             data-type="video" data-src="www/rb-analista-2.mp4"
+             data-title="RB Analista — Contenido Vol. 2"
+             data-desc="Serie de videos para canal de análisis deportivo. Edición dinámica con motion graphics.">
+          <div class="work-thumb video-thumb">
+            <video src="www/rb-analista-2.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Redes Sociales</span>
+          </div>
+          <div class="work-info">
+            <h3>RB Analista — Vol. 2</h3>
+            <p>Contenido digital para análisis deportivo · Publigram Agency</p>
+            <div class="work-tags"><span>Motion</span><span>Edición</span><span>Branding</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion design"
+             data-type="video" data-src="www/flyer-jet.mp4"
+             data-title="Flyer Jet — Motion Graphics"
+             data-desc="Flyer animado con motion graphics para proyecto propio. Diseño, animación y compositing.">
+          <div class="work-thumb video-thumb">
+            <video src="www/flyer-jet.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Motion</span>
+          </div>
+          <div class="work-info">
+            <h3>Flyer Jet — Animado</h3>
+            <p>Motion graphics · pieza publicitaria animada</p>
+            <div class="work-tags"><span>After Effects</span><span>Motion</span><span>Compositing</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social motion"
+             data-type="video" data-src="www/atletico-nacional.mp4"
+             data-title="Atlético Nacional — Contenido"
+             data-desc="Pieza audiovisual para contenido deportivo. Edición y diseño para canal de análisis.">
+          <div class="work-thumb video-thumb">
+            <video src="www/atletico-nacional.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Deportivo</span>
+          </div>
+          <div class="work-info">
+            <h3>Atlético Nacional</h3>
+            <p>Contenido deportivo · Publigram Agency</p>
+            <div class="work-tags"><span>Edición</span><span>Motion</span><span>Deportes</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion"
+             data-type="video" data-src="www/audiovisual-1.mp4"
+             data-title="Reel Freelance — Vol. 1" data-desc="Producción audiovisual freelance — edición y postproducción.">
+          <div class="work-thumb video-thumb">
+            <video src="www/audiovisual-1.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Freelance</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel Freelance — Vol. 1</h3>
+            <p>Producción y edición audiovisual independiente</p>
+            <div class="work-tags"><span>Edición</span><span>Video</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion"
+             data-type="video" data-src="www/audiovisual-2.mp4"
+             data-title="Reel — Tunnel Travel" data-desc="Pieza audiovisual para Tunnel Travel Services — edición y postproducción.">
+          <div class="work-thumb video-thumb">
+            <video src="www/audiovisual-2.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Tunnel Travel</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel — Tunnel Travel</h3>
+            <p>Edición y postproducción · Tunnel Travel Services</p>
+            <div class="work-tags"><span>Edición</span><span>Video</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion"
+             data-type="video" data-src="www/audiovisual-3.mp4"
+             data-title="Reel Freelance — Vol. 2" data-desc="Producción audiovisual freelance — edición y postproducción.">
+          <div class="work-thumb video-thumb">
+            <video src="www/audiovisual-3.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Freelance</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel Freelance — Vol. 2</h3>
+            <p>Producción y edición audiovisual independiente</p>
+            <div class="work-tags"><span>Edición</span><span>Video</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/audiovisual-4.mp4"
+             data-title="Reel Freelance — Vol. 3" data-desc="Producción audiovisual freelance — edición y postproducción.">
+          <div class="work-thumb video-thumb">
+            <video src="www/audiovisual-4.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Freelance</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel Freelance — Vol. 3</h3>
+            <p>Producción y edición audiovisual independiente</p>
+            <div class="work-tags"><span>Edición</span><span>Video</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="video motion"
+             data-type="video" data-src="www/audiovisual-5.mp4"
+             data-title="Reel — Publigram Agency" data-desc="Pieza audiovisual para Publigram Agency — edición y postproducción.">
+          <div class="work-thumb video-thumb">
+            <video src="www/audiovisual-5.mp4" muted loop playsinline></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Publigram Agency</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel — Publigram Agency</h3>
+            <p>Edición y postproducción · Publigram Agency</p>
+            <div class="work-tags"><span>Edición</span><span>Video</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-media"></div>
+      <div class="modal-text">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="nav-logo">IF</a>
+        <p>© 2026 Ignacio Fudim — Diseñador Multimedial & Editor de Video</p>
+        <div class="footer-links">
+          <a href="mailto:nachofudim@gmail.com">Email</a>
+          <a href="https://instagram.com/nachofudim" target="_blank">Instagram</a>
+          <a href="https://wa.me/+541149737556" target="_blank" class="footer-wa"><svg class="wa-icon" viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.5.68 4.84 1.87 6.85L2.67 29.33l6.6-1.73a13.3 13.3 0 0 0 6.77 1.85c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.2c-2.14 0-4.12-.6-5.8-1.63l-.42-.25-3.92 1.03 1.04-3.82-.27-.4a10.9 10.9 0 0 1-1.7-5.76c0-6.05 4.92-10.97 10.97-10.97s10.97 4.92 10.97 10.97-4.92 10.97-10.97 10.97Zm6-8.22c-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.73.16-.22.33-.84 1.07-1.03 1.29-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.63-1.63-.97-.87-1.63-1.94-1.82-2.27-.19-.33-.02-.5.14-.67.15-.15.33-.38.5-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.73-1.75-.99-2.4-.26-.62-.53-.54-.73-.55h-.62c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.38.54 1.86.69.78.25 1.49.21 2.05.13.62-.1 1.94-.79 2.22-1.56.27-.76.27-1.42.19-1.56-.08-.14-.3-.22-.63-.38Z"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
