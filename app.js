@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ========================================================= */
   var preloader = document.getElementById('preloader');
   if (preloader) {
-    var minDelay = prefersReducedMotion ? 0 : 650;
+    var minDelay = prefersReducedMotion ? 0 : 250;
     setTimeout(function () {
       preloader.classList.add('hidden');
     }, minDelay);
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollY = window.scrollY;
     navLinks.classList.add('open');
     hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
     overlay.classList.add('visible');
     document.body.classList.add('menu-open');
     document.body.style.top = '-' + scrollY + 'px';
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeMenu() {
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
     overlay.classList.remove('visible');
     document.body.classList.remove('menu-open');
     document.body.style.top = '';
@@ -105,6 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
     worksGrid.addEventListener('click', function (e) {
       var card = e.target.closest('.work-card');
       if (!card) return;
+      if (card.getAttribute('data-type') === 'web') {
+        if (!e.target.closest('a')) window.open(card.getAttribute('data-href'), '_blank', 'noopener');
+        return;
+      }
       var type  = card.getAttribute('data-type');
       var title = card.getAttribute('data-title');
       var desc  = card.getAttribute('data-desc');
@@ -117,6 +123,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  /* =========================================================
+     ACCESIBILIDAD: título de cada video desde su tarjeta
+  ========================================================= */
+  document.querySelectorAll('.work-card video').forEach(function (video) {
+    var card = video.closest('.work-card');
+    var title = card && card.getAttribute('data-title');
+    if (title && !video.hasAttribute('aria-label')) {
+      video.setAttribute('aria-label', title);
+      video.setAttribute('title', title);
+    }
+  });
 
   /* =========================================================
      VIDEO HOVER PLAY (solo desktop)
@@ -142,8 +160,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function applyTab(tab) {
     workCards.forEach(function (card) {
       var type = card.getAttribute('data-type');
-      var isReel = type === 'video';
-      var show = tab === 'reels' ? isReel : !isReel;
+      var show = tab === 'reels' ? type === 'video'
+               : tab === 'web'   ? type === 'web'
+               : (type !== 'video' && type !== 'web');
       card.style.display = show ? '' : 'none';
       if (show) {
         card.style.opacity = '1';
@@ -251,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var text = btn.getAttribute('data-copy');
       var done = function () {
         var original = btn.textContent;
-        btn.textContent = '¡Copiado!';
+        btn.textContent = window.__t ? window.__t('¡Copiado!') : '¡Copiado!';
         btn.classList.add('copied');
         setTimeout(function () {
           btn.textContent = original;

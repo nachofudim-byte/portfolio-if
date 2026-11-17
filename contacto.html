@@ -4,10 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto — Ignacio Fudim</title>
+  <meta name="description" content="Contactá a Ignacio Fudim para proyectos de diseño, edición de video y motion graphics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contacto — Ignacio Fudim" />
+  <meta property="og:description" content="Contactá a Ignacio Fudim para proyectos de diseño, edición de video y motion graphics." />
+  <meta property="og:url" content="https://ignacio-fudim-portfolio.vercel.app/contacto.html" />
+  <meta property="og:image" content="https://ignacio-fudim-portfolio.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
   <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
 </head>
 <body>
 
@@ -16,15 +26,14 @@
       <a href="index.html" class="nav-logo">IF</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="experiencia.html">Experiencia</a></li>
         <li><a href="trabajos.html">Trabajos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html" class="nav-active">Contacto</a></li>
         <li class="nav-mobile-cta"><a href="mailto:nachofudim@gmail.com">Trabajemos juntos →</a></li>
       </ul>
       <a href="mailto:nachofudim@gmail.com" class="nav-cta">Trabajemos juntos</a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>

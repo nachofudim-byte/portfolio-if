@@ -4,10 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trabajos — Ignacio Fudim</title>
+  <meta name="description" content="Reels, motion graphics y piezas de diseño para Oil Lab, Ladder Propiedades, Tunnel Travel y más." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trabajos — Ignacio Fudim" />
+  <meta property="og:description" content="Reels, motion graphics y piezas de diseño para Oil Lab, Ladder Propiedades, Tunnel Travel y más." />
+  <meta property="og:url" content="https://ignacio-fudim-portfolio.vercel.app/trabajos.html" />
+  <meta property="og:image" content="https://ignacio-fudim-portfolio.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
   <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
 </head>
 <body>
 
@@ -16,15 +26,14 @@
       <a href="index.html" class="nav-logo">IF</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="experiencia.html">Experiencia</a></li>
         <li><a href="trabajos.html" class="nav-active">Trabajos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li class="nav-mobile-cta"><a href="mailto:nachofudim@gmail.com">Trabajemos juntos →</a></li>
       </ul>
       <a href="mailto:nachofudim@gmail.com" class="nav-cta">Trabajemos juntos</a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -43,6 +52,7 @@
       <div class="filter-row">
         <button class="filter-btn active" data-tab="reels">Reels</button>
         <button class="filter-btn" data-tab="posts">Publicaciones</button>
+        <button class="filter-btn" data-tab="web">Sitios web</button>
       </div>
 
       <div class="works-grid" id="works-grid">
@@ -99,11 +109,11 @@
         </div>
 
         <div class="work-card" data-category="video motion social"
-             data-type="video" data-src="www/oil-lab/video-2.mp4"
+             data-type="video" data-src="www/oil-lab/oil-lab-ia-1-caso-real.mp4"
              data-title="Reel para Oil Lab 2"
-             data-desc="Pieza audiovisual institucional para OIL LAB Argentina, explicando el servicio de análisis de aceite usado.">
+             data-desc="Reel «Caso real: casi compra un motor fundido» para OIL LAB Argentina. Guion, edición, subtítulos y gráficos animados con IA.">
           <div class="work-thumb video-thumb">
-            <video src="www/oil-lab/video-2.mp4" muted loop playsinline></video>
+            <video src="www/oil-lab/oil-lab-ia-1-caso-real.mp4" poster="www/oil-lab/portada-oil-lab-ia-1.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">OIL LAB</span>
           </div>
@@ -115,11 +125,11 @@
         </div>
 
         <div class="work-card" data-category="video motion social"
-             data-type="video" data-src="www/oil-lab/reel-2.mp4"
+             data-type="video" data-src="www/oil-lab/oil-lab-ia-2-tres-secretos.mp4"
              data-title="Reel para Oil Lab 3"
-             data-desc="Segunda pieza de la campaña de OIL LAB Argentina para redes sociales.">
+             data-desc="Reel «3 cosas que el vendedor no te dice» para OIL LAB Argentina, sobre autos usados. Guion, edición, subtítulos y gráficos animados con IA.">
           <div class="work-thumb video-thumb">
-            <video src="www/oil-lab/reel-2.mp4" muted loop playsinline></video>
+            <video src="www/oil-lab/oil-lab-ia-2-tres-secretos.mp4" poster="www/oil-lab/portada-oil-lab-ia-2.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">OIL LAB</span>
           </div>
@@ -135,7 +145,7 @@
              data-title="Motion Graphics Logo Oil Lab"
              data-desc="Animación de presentación de marca para OIL LAB Argentina.">
           <div class="work-thumb video-thumb">
-            <video src="www/oil-lab/logo-reveal.mp4" muted loop playsinline></video>
+            <video src="www/oil-lab/logo-reveal.mp4" poster="www/oil-lab/logo-reveal-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Branding</span>
           </div>
@@ -158,6 +168,38 @@
           <div class="work-info">
             <h3>Portada Reel Oil Lab</h3>
             <p>Portada para el reel de lanzamiento</p>
+            <div class="work-tags"><span>Photoshop</span><span>Diseño</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="design social"
+             data-type="image" data-src="www/oil-lab/portada-oil-lab-ia-1.jpg"
+             data-title="Portada Reel Oil Lab 2"
+             data-desc="Portada del reel «Caso real: casi compra un motor fundido» para OIL LAB Argentina.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/portada-oil-lab-ia-1.jpg" alt="Portada Reel Oil Lab 2" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+          </div>
+          <div class="work-info">
+            <h3>Portada Reel Oil Lab 2</h3>
+            <p>Portada para reel · Caso real</p>
+            <div class="work-tags"><span>Photoshop</span><span>Diseño</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="design social"
+             data-type="image" data-src="www/oil-lab/portada-oil-lab-ia-2.jpg"
+             data-title="Portada Reel Oil Lab 3"
+             data-desc="Portada del reel «3 cosas que el vendedor no te dice» para OIL LAB Argentina.">
+          <div class="work-thumb img-thumb">
+            <img src="www/oil-lab/portada-oil-lab-ia-2.jpg" alt="Portada Reel Oil Lab 3" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">✦</span></div>
+            <span class="work-cat-badge">Diseño Gráfico</span>
+          </div>
+          <div class="work-info">
+            <h3>Portada Reel Oil Lab 3</h3>
+            <p>Portada para reel · Autos usados</p>
             <div class="work-tags"><span>Photoshop</span><span>Diseño</span></div>
           </div>
         </div>
@@ -273,7 +315,7 @@
              data-title="Reel para Pronostic.io"
              data-desc="Pieza audiovisual para Pronostic.io, plataforma de pronósticos deportivos con IA, sobre las semifinales del Mundial 2026.">
           <div class="work-thumb video-thumb">
-            <video src="www/pronostic/reel.mp4" muted loop playsinline></video>
+            <video src="www/pronostic/reel.mp4" poster="www/pronostic/reel-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Pronostic.io</span>
           </div>
@@ -307,7 +349,7 @@
              data-title="Reel Tunnel Travel Services"
              data-desc="Un viaje en segundos. Video promocional para Tunnel Travel Services que transforma destinos en ganas de armar la valija.">
           <div class="work-thumb video-thumb">
-            <video src="www/tunnel-travel/video-1.mp4" muted loop playsinline></video>
+            <video src="www/tunnel-travel/video-1.mp4" poster="www/tunnel-travel/video-1-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Tunnel Travel</span>
           </div>
@@ -323,7 +365,7 @@
              data-title="Reel Tunnel Travel Services 2"
              data-desc="Ritmo, paisajes y cortes al beat: segunda pieza promocional para Tunnel Travel Services, hecha para inspirar la próxima escapada.">
           <div class="work-thumb video-thumb">
-            <video src="www/tunnel-travel/video-2.mp4" muted loop playsinline></video>
+            <video src="www/tunnel-travel/video-2.mp4" poster="www/tunnel-travel/video-2-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Tunnel Travel</span>
           </div>
@@ -339,7 +381,7 @@
              data-title="Reel Tunnel Travel Services 3"
              data-desc="Un destino de playa contado en segundos: reel promocional de Cancún para Tunnel Travel Services, con edición ágil y ritmo vacacional para despertar ganas de viajar.">
           <div class="work-thumb video-thumb">
-            <video src="www/tunnel-travel/video-3.mp4" muted loop playsinline></video>
+            <video src="www/tunnel-travel/video-3.mp4" poster="www/tunnel-travel/video-3-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Tunnel Travel</span>
           </div>
@@ -355,7 +397,7 @@
              data-title="Reel Tunnel Travel Services 4"
              data-desc="Una ciudad icónica en formato reel: pieza promocional de Londres para Tunnel Travel Services, con cortes dinámicos pensados para inspirar el próximo viaje.">
           <div class="work-thumb video-thumb">
-            <video src="www/tunnel-travel/video-4.mp4" muted loop playsinline></video>
+            <video src="www/tunnel-travel/video-4.mp4" poster="www/tunnel-travel/video-4-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Tunnel Travel</span>
           </div>
@@ -370,7 +412,7 @@
              data-type="video" data-src="www/audiovisual-2.mp4"
              data-title="Reel Tunnel Travel Services 5" data-desc="Contenido para redes de Tunnel Travel Services: edición dinámica pensada para que el viaje se sienta antes de reservarlo.">
           <div class="work-thumb video-thumb">
-            <video src="www/audiovisual-2.mp4" muted loop playsinline></video>
+            <video src="www/audiovisual-2.mp4" poster="www/audiovisual-2-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Tunnel Travel</span>
           </div>
@@ -386,7 +428,7 @@
              data-title="Reel Ladder Propiedades 1"
              data-desc="Una propiedad contada como una historia. Video para Ladder Propiedades que muestra cada espacio con ritmo y detalle.">
           <div class="work-thumb video-thumb">
-            <video src="www/ladder-propiedades/video-1.mp4" muted loop playsinline></video>
+            <video src="www/ladder-propiedades/video-1.mp4" poster="www/ladder-propiedades/video-1-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Ladder Propiedades</span>
           </div>
@@ -402,7 +444,7 @@
              data-title="Reel Ladder Propiedades 2"
              data-desc="Recorrido completo por la propiedad de Paysandú, en Caballito: el video que permite conocerla antes de la visita.">
           <div class="work-thumb video-thumb">
-            <video src="www/ladder-propiedades/video-paysandu.mp4" muted loop playsinline></video>
+            <video src="www/ladder-propiedades/video-paysandu.mp4" poster="www/ladder-propiedades/video-paysandu-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Ladder Propiedades</span>
           </div>
@@ -418,7 +460,7 @@
              data-title="Reel Ladder Propiedades 3"
              data-desc="Reel corto y directo para Ladder Propiedades: la propiedad de Aguilar en sus mejores ángulos, lista para generar consultas.">
           <div class="work-thumb video-thumb">
-            <video src="www/ladder-propiedades/reel-aguilar.mp4" muted loop playsinline></video>
+            <video src="www/ladder-propiedades/reel-aguilar.mp4" poster="www/ladder-propiedades/reel-aguilar-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Ladder Propiedades</span>
           </div>
@@ -434,7 +476,7 @@
              data-title="Reel Ladder Propiedades 4"
              data-desc="Luz, espacios y movimiento: reel de la propiedad de Dorrego para Ladder Propiedades, pensado para captar compradores desde el primer segundo.">
           <div class="work-thumb video-thumb">
-            <video src="www/ladder-propiedades/reel-dorrego.mp4" muted loop playsinline></video>
+            <video src="www/ladder-propiedades/reel-dorrego.mp4" poster="www/ladder-propiedades/reel-dorrego-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Ladder Propiedades</span>
           </div>
@@ -450,7 +492,7 @@
              data-title="Reel Ladder Propiedades 5"
              data-desc="Video de propiedad para Ladder Propiedades con tomas fluidas y edición limpia, para que cada ambiente hable por sí solo.">
           <div class="work-thumb video-thumb">
-            <video src="www/ladder-propiedades/video-ciudad-nuevo.mp4" muted loop playsinline></video>
+            <video src="www/ladder-propiedades/video-ciudad-nuevo.mp4" poster="www/ladder-propiedades/video-ciudad-nuevo-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Ladder Propiedades</span>
           </div>
@@ -532,7 +574,7 @@
              data-title="RB Analista Reel"
              data-desc="Producción de contenido para canal de análisis deportivo. Motion graphics, edición y postproducción para Publigram Agency.">
           <div class="work-thumb video-thumb">
-            <video src="www/rb-analista-1.mp4" muted loop playsinline></video>
+            <video src="www/rb-analista-1.mp4" poster="www/rb-analista-1-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Redes Sociales</span>
           </div>
@@ -548,7 +590,7 @@
              data-title="RB Analista Reel 2"
              data-desc="Serie de videos para canal de análisis deportivo. Edición dinámica con motion graphics.">
           <div class="work-thumb video-thumb">
-            <video src="www/rb-analista-2.mp4" muted loop playsinline></video>
+            <video src="www/rb-analista-2.mp4" poster="www/rb-analista-2-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Redes Sociales</span>
           </div>
@@ -563,7 +605,7 @@
              data-type="video" data-src="www/independiente/gout-reel.mp4"
              data-title="Reel Gout" data-desc="Edición y postproducción de reel para Gout.">
           <div class="work-thumb video-thumb">
-            <video src="www/independiente/gout-reel.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="www/independiente/gout-reel.mp4" poster="www/independiente/gout-reel-poster.jpg" muted loop playsinline preload="metadata"></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Gout</span>
           </div>
@@ -578,7 +620,7 @@
              data-type="video" data-src="www/audiovisual-5.mp4"
              data-title="Reel PubliGram Agency" data-desc="Pieza audiovisual para Publigram Agency: edición y postproducción.">
           <div class="work-thumb video-thumb">
-            <video src="www/audiovisual-5.mp4" muted loop playsinline></video>
+            <video src="www/audiovisual-5.mp4" poster="www/audiovisual-5-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Publigram Agency</span>
           </div>
@@ -594,7 +636,7 @@
              data-title="Flyer Jet Motion Graphics"
              data-desc="Flyer animado con motion graphics para proyecto propio. Diseño, animación y compositing.">
           <div class="work-thumb video-thumb">
-            <video src="www/flyer-jet.mp4" muted loop playsinline></video>
+            <video src="www/flyer-jet.mp4" poster="www/flyer-jet-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Motion</span>
           </div>
@@ -610,7 +652,7 @@
              data-title="Motion Graphics DT Burgers"
              data-desc="Reel de producto para DT Burgers con la hamburguesa desarmada capa por capa.">
           <div class="work-thumb video-thumb">
-            <video src="www/independiente/dtburgers-desmontada.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="www/independiente/dtburgers-desmontada.mp4" poster="www/independiente/dtburgers-desmontada-poster.jpg" muted loop playsinline preload="metadata"></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Gastronomía</span>
           </div>
@@ -626,7 +668,7 @@
              data-title="Videoclip Ya Quiero Saber"
              data-desc="Videoclip cinematográfico producido íntegramente. Dirección, filmación, montaje y postproducción completa.">
           <div class="work-thumb video-thumb">
-            <video src="www/ya-quiero-saber.mp4" muted loop playsinline></video>
+            <video src="www/ya-quiero-saber.mp4" poster="www/ya-quiero-saber-poster.jpg" muted loop playsinline></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Videoclip</span>
           </div>
@@ -641,7 +683,7 @@
              data-type="video" data-src="www/independiente/eyes-without-a-face.mp4"
              data-title="Eyes Without a Face Motion Graphics" data-desc="Pieza experimental de motion graphics inspirada en Eyes Without a Face: tipografía, ritmo y atmósfera llevados al límite.">
           <div class="work-thumb video-thumb">
-            <video src="www/independiente/eyes-without-a-face.mp4" muted loop playsinline preload="metadata"></video>
+            <video src="www/independiente/eyes-without-a-face.mp4" poster="www/independiente/eyes-without-a-face-poster.jpg" muted loop playsinline preload="metadata"></video>
             <div class="work-overlay"><span class="play-icon">▶</span></div>
             <span class="work-cat-badge">Motion</span>
           </div>
@@ -649,6 +691,38 @@
             <h3>Eyes Without a Face Motion Graphics</h3>
             <p>Motion graphics y animación</p>
             <div class="work-tags"><span>Motion</span><span>Video</span></div>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="web"
+             data-type="web" data-href="https://portfolio-studioujh.vercel.app/"
+             data-title="Sitio web para Studio Ujh">
+          <div class="work-thumb img-thumb web-thumb">
+            <img src="www/web/portfolio-studioujh.jpg" alt="Captura del sitio de Studio Ujh" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">↗</span></div>
+            <span class="work-cat-badge">Sitio web</span>
+          </div>
+          <div class="work-info">
+            <h3>Sitio web para Studio Ujh</h3>
+            <p>Portfolio para un estudio de diseño</p>
+            <div class="work-tags"><span>Diseño web</span><span>UI / UX</span><span>Vercel</span></div>
+            <a href="https://portfolio-studioujh.vercel.app/" target="_blank" rel="noopener" class="web-link">Ver sitio ↗</a>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="web"
+             data-type="web" data-href="https://estudiofudim.vercel.app/"
+             data-title="Sitio web para PJF Abogados">
+          <div class="work-thumb img-thumb web-thumb">
+            <img src="www/web/estudiofudim.jpg" alt="Captura del sitio de PJF Abogados" loading="lazy" />
+            <div class="work-overlay"><span class="play-icon">↗</span></div>
+            <span class="work-cat-badge">Sitio web</span>
+          </div>
+          <div class="work-info">
+            <h3>Sitio web para PJF Abogados</h3>
+            <p>Sitio institucional para un estudio jurídico</p>
+            <div class="work-tags"><span>Diseño web</span><span>UI / UX</span><span>Vercel</span></div>
+            <a href="https://estudiofudim.vercel.app/" target="_blank" rel="noopener" class="web-link">Ver sitio ↗</a>
           </div>
         </div>
 

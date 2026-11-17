@@ -4,10 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experiencia — Ignacio Fudim</title>
+  <meta name="description" content="Trayectoria profesional y formación de Ignacio Fudim, diseñador multimedia y editor de video." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Experiencia — Ignacio Fudim" />
+  <meta property="og:description" content="Trayectoria profesional y formación de Ignacio Fudim, diseñador multimedia y editor de video." />
+  <meta property="og:url" content="https://ignacio-fudim-portfolio.vercel.app/experiencia.html" />
+  <meta property="og:image" content="https://ignacio-fudim-portfolio.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
   <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
 </head>
 <body>
 
@@ -16,15 +26,14 @@
       <a href="index.html" class="nav-logo">IF</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="experiencia.html" class="nav-active">Experiencia</a></li>
         <li><a href="trabajos.html">Trabajos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li class="nav-mobile-cta"><a href="mailto:nachofudim@gmail.com">Trabajemos juntos →</a></li>
       </ul>
       <a href="mailto:nachofudim@gmail.com" class="nav-cta">Trabajemos juntos</a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -35,13 +44,35 @@
   <div class="page-header">
     <div class="container">
       <span class="section-tag">Trayectoria</span>
-      <h1>Experiencia <span class="accent">Profesional</span></h1>
+      <h1 data-en="Professional <span class=&quot;accent&quot;>Experience</span>">Experiencia <span class="accent">Profesional</span></h1>
+      <p class="page-header-sub">Trabajo profesional, educación y trayectoria creativa.</p>
     </div>
   </div>
 
   <section id="experience">
     <div class="container">
       <div class="timeline">
+
+        <div class="timeline-item current">
+          <div class="timeline-marker"><span class="timeline-dot active"></span></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period current-badge">2022 — Actualidad</span>
+                <h3>Diseñador Audiovisual Freelance</h3>
+                <span class="timeline-company">Independiente</span>
+              </div>
+              <span class="timeline-icon">🎨</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Diseño de imágenes, banners y videos para distintas marcas</li>
+              <li>Videos de presentaciones gráficas y motion</li>
+              <li>Edición y diseño de fotografías</li>
+              <li>Utilización de inteligencias artificiales en producción</li>
+            </ul>
+            <div class="timeline-tags"><span>Freelance</span><span>Adobe Suite</span><span>Motion</span><span>IA</span></div>
+          </div>
+        </div>
 
         <div class="timeline-item current">
           <div class="timeline-marker"><span class="timeline-dot active"></span></div>
@@ -105,28 +136,6 @@
             <div class="timeline-tags"><span>Photoshop</span><span>Fotografía</span><span>Branding</span><span>RRSS</span></div>
           </div>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"><span class="timeline-dot"></span></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <span class="timeline-period">2022 — 2025</span>
-                <h3>Diseñador Audiovisual Freelance</h3>
-                <span class="timeline-company">Independiente</span>
-              </div>
-              <span class="timeline-icon">🎨</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Diseño de imágenes, banners y videos para distintas marcas</li>
-              <li>Videos de presentaciones gráficas y motion</li>
-              <li>Edición y diseño de fotografías</li>
-              <li>Utilización de inteligencias artificiales en producción</li>
-            </ul>
-            <div class="timeline-tags"><span>Freelance</span><span>Adobe Suite</span><span>Motion</span><span>IA</span></div>
-          </div>
-        </div>
-
       </div>
 
       <!-- Educación -->
@@ -150,6 +159,32 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container" id="trayectoria">
+      <span class="section-tag">Historial</span>
+      <h2 data-en="Creative <span class=&quot;accent&quot;>Journey</span>">Trayectoria <span class="accent">Creativa</span></h2>
+      <p class="page-header-sub" style="margin-bottom:32px;">Un recorrido completo por mi trabajo a lo largo de los años.</p>
+      <div class="projects-grid">
+        <div class="project-item"><span class="project-year">2025</span><span class="project-name">User Interface and User Experience (UI/UX)</span><span class="project-cat">Diseño</span></div>
+        <div class="project-item"><span class="project-year">2025</span><span class="project-name">Creación, diseño y prototipo de videojuego</span><span class="project-cat">Multimedia</span></div>
+        <div class="project-item"><span class="project-year">2025</span><span class="project-name">Edición de video para publicidad de Instagram</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2024</span><span class="project-name">Edición de Videoclip</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2024</span><span class="project-name">Edición de Cortometraje</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2024</span><span class="project-name">Edición Videominuto</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2023</span><span class="project-name">Creación y diseño de aplicación móvil</span><span class="project-cat">UI/UX</span></div>
+        <div class="project-item"><span class="project-year">2023</span><span class="project-name">Edición de sonido</span><span class="project-cat">Audio</span></div>
+        <div class="project-item"><span class="project-year">2022</span><span class="project-name">Creación y diseño de páginas web</span><span class="project-cat">Web</span></div>
+        <div class="project-item"><span class="project-year">2022</span><span class="project-name">Creación y diseño de una revista</span><span class="project-cat">Editorial</span></div>
+        <div class="project-item"><span class="project-year">2020</span><span class="project-name">Grabación y edición de musicales</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2019</span><span class="project-name">Edición de trailers con Adobe Premiere</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2019</span><span class="project-name">Grabación y edición de cortometrajes</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2019</span><span class="project-name">Grabación y edición de videoclips</span><span class="project-cat">Video</span></div>
+        <div class="project-item"><span class="project-year">2019</span><span class="project-name">Grabación y edición de video documentales</span><span class="project-cat">Documental</span></div>
+        <div class="project-item"><span class="project-year">2018</span><span class="project-name">Edición de sonido</span><span class="project-cat">Audio</span></div>
       </div>
     </div>
   </section>

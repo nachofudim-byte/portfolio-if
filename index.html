@@ -4,10 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ignacio Fudim — Diseñador Multimedial & Editor de Video</title>
+  <meta name="description" content="Diseñador multimedia y editor de video. Reels, motion graphics, diseño gráfico y contenido para redes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ignacio Fudim — Diseñador Multimedial & Editor de Video" />
+  <meta property="og:description" content="Diseñador multimedia y editor de video. Reels, motion graphics, diseño gráfico y contenido para redes." />
+  <meta property="og:url" content="https://ignacio-fudim-portfolio.vercel.app/" />
+  <meta property="og:image" content="https://ignacio-fudim-portfolio.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
   <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
 </head>
 <body>
 
@@ -30,15 +40,14 @@
       <a href="index.html" class="nav-logo">IF</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="nav-active">Inicio</a></li>
-        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="experiencia.html">Experiencia</a></li>
         <li><a href="trabajos.html">Trabajos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li class="nav-mobile-cta"><a href="mailto:nachofudim@gmail.com">Trabajemos juntos →</a></li>
       </ul>
       <a href="mailto:nachofudim@gmail.com" class="nav-cta">Trabajemos juntos</a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -57,6 +66,13 @@
         <a href="trabajos.html" class="btn-primary">Ver trabajos</a>
         <a href="contacto.html" class="btn-outline">Contactarme</a>
         <a href="CV-Ignacio-Fudim.pdf" class="btn-outline" download>Descargar CV</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://instagram.com/nachofudim" target="_blank" rel="noopener">Instagram</a>
+        <span class="dot-sep">·</span>
+        <a href="https://www.linkedin.com/in/ignacio-fudim/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot-sep">·</span>
+        <a href="https://wa.me/+541149737556" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="hero-marquee">
@@ -88,18 +104,92 @@
     </div>
   </section>
 
+  <!-- TRABAJOS DESTACADOS -->
+  <section id="destacados">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="section-tag">Portfolio</span>
+          <h2>Trabajos destacados</h2>
+        </div>
+        <a href="trabajos.html" class="section-link">Ver todos los trabajos →</a>
+      </div>
+      <div class="works-grid home-featured-grid" id="works-grid">
+        <div class="work-card" data-category="video social"
+             data-type="video" data-src="www/independiente/reel-voz-en-off.mp4"
+             data-title="Reel para Instagram"
+             data-desc="Mi propio reel para redes: guion, voz en off, edición y subtítulos pensados para frenar el scroll y mostrar el contenido que puedo crear para tu marca.">
+          <div class="work-thumb video-thumb">
+            <video src="www/independiente/reel-voz-en-off.mp4" poster="www/independiente/portada-voz-en-off.png" muted loop playsinline preload="metadata"></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">⭐ Video</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel para Instagram</h3>
+            <p>Edición, voz en off y subtítulos</p>
+            <div class="work-tags"><span>Edición</span><span>Voz en off</span><span>IA</span></div>
+          </div>
+        </div>
+        <div class="work-card" data-category="video motion social"
+             data-type="video" data-src="www/oil-lab/oil-lab-reel-3-reedit.mp4"
+             data-title="Reel para Oil Lab 1"
+             data-desc="Reel principal de la campaña de lanzamiento de OIL LAB Argentina, laboratorio de análisis de aceite usado. Dirección, edición y motion graphics.">
+          <div class="work-thumb video-thumb">
+            <video src="www/oil-lab/oil-lab-reel-3-reedit.mp4" poster="www/oil-lab/portada-oil-lab.png" muted loop playsinline preload="metadata"></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">OIL LAB</span>
+          </div>
+          <div class="work-info">
+            <h3>Reel para Oil Lab 1</h3>
+            <p>Reel de lanzamiento — edición, motion graphics y guion</p>
+            <div class="work-tags"><span>Premiere Pro</span><span>After Effects</span><span>IA</span></div>
+          </div>
+        </div>
+        <div class="work-card" data-category="video motion social"
+             data-type="video" data-src="www/independiente/mordida-pro-v6.mp4"
+             data-title="Motion Graphics Mordida Smash Burgers"
+             data-desc="Reel de motion design para una hamburguesería (marca ficticia): explosión de capas con etiquetas animadas y detrás de cámara del proceso.">
+          <div class="work-thumb video-thumb">
+            <video src="www/independiente/mordida-pro-v6.mp4" poster="www/independiente/portada-mordida.png" muted loop playsinline preload="metadata"></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Motion</span>
+          </div>
+          <div class="work-info">
+            <h3>Motion Graphics Mordida Smash Burgers</h3>
+            <p>Motion design para gastronomía</p>
+            <div class="work-tags"><span>Motion</span><span>IA</span><span>Claude Code</span></div>
+          </div>
+        </div>
+        <div class="work-card" data-category="video motion"
+             data-type="video" data-src="www/independiente/eyes-without-a-face.mp4"
+             data-title="Eyes Without a Face Motion Graphics" data-desc="Pieza experimental de motion graphics inspirada en Eyes Without a Face: tipografía, ritmo y atmósfera llevados al límite.">
+          <div class="work-thumb video-thumb">
+            <video src="www/independiente/eyes-without-a-face.mp4" poster="www/independiente/eyes-without-a-face-poster.jpg" muted loop playsinline preload="metadata"></video>
+            <div class="work-overlay"><span class="play-icon">▶</span></div>
+            <span class="work-cat-badge">Motion</span>
+          </div>
+          <div class="work-info">
+            <h3>Eyes Without a Face Motion Graphics</h3>
+            <p>Motion graphics y animación</p>
+            <div class="work-tags"><span>Motion</span><span>Video</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-left">
           <h2>Hola, soy<br /><span class="accent">Ignacio</span></h2>
-          <p class="about-lead">Soy una persona proactiva, responsable y con gran capacidad de adaptación. Me apasiona el diseño y la innovación tecnológica.</p>
-          <p class="about-body">Tengo 23 años, nací en Buenos Aires y vivo en General Pacheco, Provincia de Buenos Aires. Actualmente estoy cursando <strong>Diseño Multimedia y de Interacción en la UADE</strong> y trabajando como Diseñador y Editor de Video en <strong>Publigram Agency</strong>.</p>
+          <p class="about-lead">Soy diseñador multimedia, editor de video y motion designer. Creo contenido para redes, piezas de marca y videos que comunican rápido y se recuerdan.</p>
+          <p class="about-body">Soy de Buenos Aires. Actualmente estoy cursando <strong>Diseño Multimedia y de Interacción en la UADE</strong> y trabajando como Diseñador y Editor de Video en <strong>Publigram Agency</strong>.</p>
           <p class="about-body">Cuento con más de 3 años de experiencia como diseñador audiovisual freelance, trabajando para agencias y marcas en diseño gráfico, edición de video, motion graphics y gestión de redes sociales. Incorporo inteligencia artificial (Flow Labs, ElevenLabs, Veo 3, Gemini, ChatGPT) en mis flujos de trabajo para potenciar resultados.</p>
           <div class="about-info-row">
-            <div class="info-item"><span class="info-label">Edad</span><span class="info-val">23 años</span></div>
-            <div class="info-item"><span class="info-label">Ubicación</span><span class="info-val">General Pacheco, BsAs</span></div>
+            <div class="info-item"><span class="info-label">Modalidad</span><span class="info-val">Remoto · Híbrido</span></div>
+            <div class="info-item"><span class="info-label">Ubicación</span><span class="info-val">Buenos Aires, Argentina</span></div>
             <div class="info-item"><span class="info-label">Idiomas</span><span class="info-val">Español · Inglés</span></div>
             <div class="info-item"><span class="info-label">Educación</span><span class="info-val">UADE · ORT</span></div>
           </div>
@@ -107,31 +197,9 @@
         <div class="about-right">
           <div class="skills-block">
             <h4>Especialidades</h4>
-            <div class="skill-bars">
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>Edición de Video</span><span>95%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:95%"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>Diseño Gráfico</span><span>90%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:90%"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>Motion Graphics</span><span>85%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:85%"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>Animación 2D</span><span>80%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:80%"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>UI / UX</span><span>75%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:75%"></div></div>
-              </div>
-              <div class="skill-bar-item">
-                <div class="skill-bar-label"><span>IA & Prompting</span><span>92%</span></div>
-                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:92%"></div></div>
-              </div>
+            <div class="skill-pills">
+              <span>Edición de Video</span><span>Diseño Gráfico</span><span>Motion Graphics</span>
+              <span>Animación 2D</span><span>UI / UX</span><span>IA &amp; Prompting</span>
             </div>
           </div>
         </div>
@@ -143,12 +211,12 @@
           <span class="stat-label">Años de experiencia</span>
         </div>
         <div class="stat-card">
-          <span class="stat-num" data-count="5">5</span>
-          <span class="stat-label">Empresas / clientes</span>
+          <span class="stat-num" data-count="10">10<span class="stat-plus">+</span></span>
+          <span class="stat-label">Clientes</span>
         </div>
         <div class="stat-card">
-          <span class="stat-num" data-count="20">20<span class="stat-plus">+</span></span>
-          <span class="stat-label">Proyectos realizados</span>
+          <span class="stat-num" data-count="7">7<span class="stat-plus">+</span></span>
+          <span class="stat-label">Marcas</span>
         </div>
         <div class="stat-card">
           <span class="stat-num" data-count="6">6</span>
@@ -202,6 +270,11 @@
       </div>
       <div class="exp-preview-grid">
         <div class="exp-preview-card">
+          <span class="exp-preview-period">2022 — Actualidad</span>
+          <h3>Diseñador Audiovisual Freelance</h3>
+          <span class="exp-preview-company">Independiente</span>
+        </div>
+        <div class="exp-preview-card">
           <span class="exp-preview-period">2025 — Actualidad</span>
           <h3>Diseñador y Editor de Video</h3>
           <span class="exp-preview-company">Publigram Agency</span>
@@ -216,51 +289,6 @@
           <h3>Diseñador y Community Manager</h3>
           <span class="exp-preview-company">Ladder Propiedades</span>
         </div>
-        <div class="exp-preview-card">
-          <span class="exp-preview-period">2022 — 2025</span>
-          <h3>Diseñador Audiovisual Freelance</h3>
-          <span class="exp-preview-company">Independiente</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <div class="container">
-      <span class="section-tag">Qué hago</span>
-      <h2>Servicios</h2>
-      <div class="services-grid">
-        <div class="service-card service-card-featured">
-          <span class="service-icon">🎬</span>
-          <h3>Edición de Video</h3>
-          <p>Reels, videoclips, contenido para redes y piezas institucionales. Montaje, color y sonido con Premiere Pro.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">🎨</span>
-          <h3>Diseño Gráfico</h3>
-          <p>Carruseles, banners y piezas para campañas de marca. Composición, tipografía y sistema visual.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">✨</span>
-          <h3>Motion Graphics</h3>
-          <p>Animación de logos, transiciones y gráficos en movimiento con After Effects para campañas y branding.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">🖊️</span>
-          <h3>Animación 2D</h3>
-          <p>Rotoscopía e ilustración animada frame a frame para piezas narrativas y contenido creativo.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">📱</span>
-          <h3>Community Management</h3>
-          <p>Gestión de redes sociales, calendario de contenido y piezas listas para publicar.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">🤖</span>
-          <h3>IA & Prompting</h3>
-          <p>Flow Labs, ElevenLabs, Veo 3, Gemini y ChatGPT integrados al flujo de trabajo para producir más rápido.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -273,7 +301,14 @@
         <a href="experiencia.html" class="home-section-link">
           <div class="home-section-content">
             <h4>Experiencia</h4>
-            <p>Trayectoria profesional y educación</p>
+            <p>Trayectoria profesional, educación y proyectos</p>
+          </div>
+          <span class="home-section-arrow">→</span>
+        </a>
+        <a href="servicios.html" class="home-section-link">
+          <div class="home-section-content">
+            <h4>Servicios</h4>
+            <p>Qué puedo hacer por tu marca</p>
           </div>
           <span class="home-section-arrow">→</span>
         </a>
@@ -281,13 +316,6 @@
           <div class="home-section-content">
             <h4>Trabajos</h4>
             <p>Portfolio de diseño y edición de video</p>
-          </div>
-          <span class="home-section-arrow">→</span>
-        </a>
-        <a href="proyectos.html" class="home-section-link">
-          <div class="home-section-content">
-            <h4>Proyectos</h4>
-            <p>Historial completo de proyectos</p>
           </div>
           <span class="home-section-arrow">→</span>
         </a>
@@ -312,6 +340,19 @@
       </div>
     </div>
   </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-media"></div>
+      <div class="modal-text">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
