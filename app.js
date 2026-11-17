@@ -111,16 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!e.target.closest('a')) window.open(card.getAttribute('data-href'), '_blank', 'noopener');
         return;
       }
-      var type  = card.getAttribute('data-type');
-      var title = card.getAttribute('data-title');
-      var desc  = card.getAttribute('data-desc');
-      if (type === 'carousel') {
-        var images = (card.getAttribute('data-images') || '').split('|').filter(Boolean);
-        if (images.length) openModal('carousel', images, title, desc);
-      } else {
-        var src = card.getAttribute('data-src');
-        if (type && src) openModal(type, src, title, desc);
-      }
+      openCard(card);
     });
   }
 
@@ -414,6 +405,72 @@ function closeModal() {
 document.addEventListener('keydown', function (e) {
   var modal = document.getElementById('modal');
   if (!modal || modal.classList.contains('hidden')) return;
-  if (e.key === 'ArrowLeft') carouselNav(-1);
-  if (e.key === 'ArrowRight') carouselNav(1);
+  var inCarousel = carouselState.images && carouselState.images.length > 1;
+  if (e.key === 'ArrowLeft')  inCarousel ? carouselNav(-1) : workNav(-1);
+  if (e.key === 'ArrowRight') inCarousel ? carouselNav(1)  : workNav(1);
 });
+
+
+/* =========================================================
+   MODAL: ABRIR TARJETA Y PASAR AL TRABAJO ANTERIOR/SIGUIENTE
+========================================================= */
+var currentCard = null;
+
+function openCard(card) {
+  var type  = card.getAttribute('data-type');
+  var title = card.getAttribute('data-title');
+  var desc  = card.getAttribute('data-desc');
+  currentCard = card;
+  if (type === 'carousel') {
+    var images = (card.getAttribute('data-images') || '').split('|').filter(Boolean);
+    if (images.length) openModal('carousel', images, title, desc);
+  } else {
+    var src = card.getAttribute('data-src');
+    if (type && src) openModal(type, src, title, desc);
+  }
+  updateWorkNav();
+}
+
+// Tarjetas visibles que se abren en el modal (los sitios web abren otra pestaña)
+function modalCards() {
+  return Array.prototype.filter.call(
+    document.querySelectorAll('#works-grid .work-card'),
+    function (c) { return c.style.display !== 'none' && c.getAttribute('data-type') !== 'web'; }
+  );
+}
+
+function workNav(dir) {
+  var list = modalCards();
+  var i = list.indexOf(currentCard);
+  if (i === -1 || list.length < 2) return;
+  var mediaEl = document.getElementById('modal-media');
+  var video = mediaEl && mediaEl.querySelector('video');
+  if (video) { video.pause(); video.src = ''; }
+  carouselState = { images: [], index: 0 };
+  openCard(list[(i + dir + list.length) % list.length]);
+}
+
+function updateWorkNav() {
+  var show = modalCards().length > 1;
+  ['work-prev', 'work-next'].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) b.style.display = show ? '' : 'none';
+  });
+}
+
+(function addWorkNav() {
+  var box = document.querySelector('#modal .modal-box');
+  if (!box) return;
+  [['work-prev', -1, '&#8592;', 'Trabajo anterior'], ['work-next', 1, '&#8594;', 'Trabajo siguiente']].forEach(function (d) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.id = d[0];
+    b.className = 'work-nav ' + d[0];
+    b.innerHTML = d[2];
+    var label = window.__t ? window.__t(d[3]) : d[3];
+    b.setAttribute('aria-label', label);
+    b.setAttribute('title', label);
+    b.addEventListener('click', function (e) { e.stopPropagation(); workNav(d[1]); });
+    box.appendChild(b);
+  });
+})();

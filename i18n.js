@@ -205,6 +205,13 @@
     'Portada del reel «Caso real: casi compra un motor fundido» para OIL LAB Argentina.': 'Cover for the reel “Real case: he almost bought a blown engine” for OIL LAB Argentina.',
     'Portada del reel «3 cosas que el vendedor no te dice» para OIL LAB Argentina.': 'Cover for the reel “3 things the seller won’t tell you” for OIL LAB Argentina.',
     'Portada para reel · Caso real': 'Reel cover · Real case', 'Portada para reel · Autos usados': 'Reel cover · Used cars',
+    'Foto de Ignacio Fudim': 'Photo of Ignacio Fudim', 'Proceso': 'Process', 'Cómo trabajo': 'How I work',
+    'Brief': 'Brief', 'Propuesta': 'Proposal', 'Producción': 'Production', 'Entrega': 'Delivery',
+    'Charlamos sobre tu marca, el objetivo y el público. Defino qué piezas necesitás y en qué formato.': 'We talk about your brand, goals and audience. I define which pieces you need and in what format.',
+    'Te paso una idea clara: guion, referencias visuales y tiempos de entrega antes de arrancar.': 'I send you a clear plan: script, visual references and delivery times before we start.',
+    'Diseño, edito y animo. Te muestro avances para ajustar sobre la marcha.': 'I design, edit and animate, sharing progress so we can adjust along the way.',
+    'Recibís los archivos finales listos para publicar, en todos los formatos que necesites.': 'You get the final files ready to post, in every format you need.',
+    'Trabajo anterior': 'Previous work', 'Trabajo siguiente': 'Next work',
     'Sitios web': 'Websites', 'Sitio web': 'Website', 'Ver sitio ↗': 'View site ↗', 'Diseño web': 'Web design',
     'Sitio web para Studio Ujh': 'Studio Ujh Website', 'Sitio web para PJF Abogados': 'PJF Abogados Website',
     'Portfolio para un estudio de diseño': 'Portfolio for a design studio',
@@ -233,6 +240,10 @@
   function applyLang(lang) {
     document.documentElement.lang = lang;
     // Elementos con traducción completa en HTML (cuando el orden de las palabras cambia)
+    document.querySelectorAll('[data-href-en]').forEach(function (el) {
+      if (el.__esHref === undefined) el.__esHref = el.getAttribute('href');
+      el.setAttribute('href', lang === 'en' ? el.getAttribute('data-href-en') : el.__esHref);
+    });
     document.querySelectorAll('[data-en]').forEach(function (el) {
       if (el.__es === undefined) el.__es = el.innerHTML;
       el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.__es;
