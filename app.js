@@ -151,11 +151,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var workCards = document.querySelectorAll('#works-grid .work-card');
 
   function applyTab(tab) {
+    var grid = document.getElementById('works-grid');
+    if (grid) grid.setAttribute('data-tab', tab);
     workCards.forEach(function (card) {
       var type = card.getAttribute('data-type');
-      var show = tab === 'reels' ? type === 'video'
-               : tab === 'web'   ? type === 'web'
-               : (type !== 'video' && type !== 'web');
+      var isStory = card.getAttribute('data-kind') === 'story';
+      var show = tab === 'reels'   ? type === 'video'
+               : tab === 'web'     ? type === 'web'
+               : tab === 'stories' ? isStory
+               : (type !== 'video' && type !== 'web' && !isStory);
       card.style.display = show ? '' : 'none';
       if (show) {
         card.style.opacity = '1';
@@ -476,3 +480,42 @@ function updateWorkNav() {
     box.appendChild(b);
   });
 })();
+
+
+/* =========================================================
+   FLECHAS EN LAS TARJETAS DE CARRUSEL (pasar fotos sin abrir)
+========================================================= */
+document.querySelectorAll('.carousel-card').forEach(function (card) {
+  var images = (card.getAttribute('data-images') || '').split('|').filter(Boolean);
+  var thumb = card.querySelector('.work-thumb');
+  var img = thumb && thumb.querySelector('img');
+  var count = thumb && thumb.querySelector('.carousel-count');
+  if (!img || images.length < 2) return;
+  var idx = 0;
+  var label = count ? count.textContent : '';
+
+  function show(n) {
+    idx = (n + images.length) % images.length;
+    img.src = images[idx];
+    if (count) count.textContent = idx === 0 ? label : (idx + 1) + ' / ' + images.length;
+  }
+
+  [['card-prev', -1, '&#8249;', 'Foto anterior'], ['card-next', 1, '&#8250;', 'Foto siguiente']].forEach(function (d) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'card-nav ' + d[0];
+    b.innerHTML = d[2];
+    var l = window.__t ? window.__t(d[3]) : d[3];
+    b.setAttribute('aria-label', l);
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();   // no abrir el modal
+      show(idx + d[1]);
+    });
+    thumb.appendChild(b);
+  });
+
+  // Precargar el resto para que el cambio sea instantáneo
+  card.addEventListener('mouseenter', function () {
+    images.slice(1).forEach(function (s) { var p = new Image(); p.src = s; });
+  }, { once: true });
+});

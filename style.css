@@ -999,3 +999,27 @@ body.menu-open {
 @media (prefers-reduced-motion: reduce) {
   .hero-title-anim .ch, .hero-title-anim .accent .ch { animation: none; }
 }
+
+/* ===== TARJETAS DE CARRUSEL: FLECHAS ===== */
+.card-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15); color: #fff;
+  font-size: 20px; line-height: 1; cursor: pointer;
+  opacity: 0; transition: opacity .2s, background .2s, color .2s;
+}
+.card-prev { left: 10px; }
+.card-next { right: 10px; }
+.carousel-card:hover .card-nav, .card-nav:focus-visible { opacity: 1; }
+.card-nav:hover { background: var(--accent); color: #000; border-color: var(--accent); }
+@media (hover: none) { .card-nav { opacity: 1; } }
+
+/* Historias verticales: mostrar la parte de arriba */
+.story-thumb img { object-position: top center; }
+
+/* ===== PESTAÑA HISTORIAS: tarjetas verticales ===== */
+.works-grid[data-tab="stories"] { grid-template-columns: repeat(4, 1fr); }
+.works-grid[data-tab="stories"] .story-thumb { aspect-ratio: 9 / 16; }
+@media (max-width: 1024px) { .works-grid[data-tab="stories"] { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px)  { .works-grid[data-tab="stories"] { grid-template-columns: repeat(2, 1fr); } }
