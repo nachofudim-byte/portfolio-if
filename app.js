@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function closeMenu() {
+    // Si el menú no está abierto no hay nada que cerrar (evita volver arriba de todo)
+    if (!navLinks.classList.contains('open')) return;
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
